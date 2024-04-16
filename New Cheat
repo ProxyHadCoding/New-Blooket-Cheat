@@ -30,12 +30,12 @@ details summary ~ * {
 .cheat {
     border: none;
     background: hsl(0, 0%, 20%);
-    padding: 5px;
-    margin: 3px;
-    width: 60%;
+    padding: 8px;
+    margin: 9px;
+    width: 85%;
     color: hsl(0, 0%, 100%);
     transition: 0.2s;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 .cheat:hover {
@@ -44,17 +44,17 @@ details summary ~ * {
 
     const GUI = document.createElement('div');
     GUI.appendChild(style);
-    GUI.style.width = '400px';
-    //GUI.style.height = '500px';
-    GUI.style.background = 'hsl(0, 0%, 10%)';
-    GUI.style.borderRadius = '10px';
+    GUI.style.width = '500px';
+    //GUI.style.height = '360px';
+    GUI.style.background = 'hsl(175, 66%, 51%)';
+    GUI.style.borderRadius = '25px';
     GUI.style.position = 'absolute';
     GUI.style.textAlign = 'center';
     GUI.style.fontFamily = 'Nunito';
     GUI.style.color = 'white';
     GUI.style.overflow = 'hidden';
-    GUI.style.top = '50px';
-    GUI.style.left = '50px';
+    GUI.style.top = '40px';
+    GUI.style.left = '150px';
 
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     GUI.onmousedown = ((e = window.event) => {
@@ -79,31 +79,31 @@ details summary ~ * {
 
     let header = document.createElement('div');
     GUI.appendChild(header);
-    header.style.width = '100%';
-    header.style.height = '35px';
-    header.style.paddingTop = '2px';
-    header.style.fontSize = '1.5rem';
+    header.style.width = '80%';
+    header.style.height = '30px';
+    header.style.paddingTop = '8px';
+    header.style.fontSize = '2.3rem';
     header.style.textAlign = 'center'
-    header.innerHTML = `Proxy Cheats (Issues!) <span style="font-size: 0.75rem">v1.0.0</span>`;
+    header.innerHTML = `      Proxy Cheats (Issues!) <span style="font-size: 0.100rem">v1.0.1</span>`;
 
     let loop;
 
     let close = document.createElement('button');
     header.appendChild(close);
     close.style.background = 'red';
-    close.style.height = '45px';
-    close.style.width = '45px';
+    close.style.height = '65px';
+    close.style.width = '50px';
     close.style.border = 'none';
     close.style.cursor = 'pointer';
     close.style.position = 'absolute';
-    close.style.top = '-10px';
-    close.style.right = '-10px';
+    close.style.top = '-8px';
+    close.style.right = '-8px';
     close.style.fontSize = '1.5rem';
     close.style.borderRadius = '10px';
     close.style.fontFamily = 'Nunito';
     close.style.fontWeight = 'bolder';
-    close.style.paddingTop = '10px';
-    close.style.paddingRight = '15px';
+    close.style.paddingTop = '25px';
+    close.style.paddingRight = '25px';
     close.innerText = 'X';
     close.onclick = () => {
         GUI.remove();
@@ -114,8 +114,8 @@ details summary ~ * {
     let minimize = document.createElement('button');
     header.appendChild(minimize);
     minimize.style.background = '#444444';
-    minimize.style.height = '45px';
-    minimize.style.width = '45px';
+    minimize.style.height = '50px';
+    minimize.style.width = '50px';
     minimize.style.border = 'none';
     minimize.style.cursor = 'pointer';
     minimize.style.position = 'absolute';
@@ -125,8 +125,8 @@ details summary ~ * {
     minimize.style.borderRadius = '10px';
     minimize.style.fontFamily = 'Nunito';
     minimize.style.fontWeight = 'bolder';
-    minimize.style.paddingTop = '10px';
-    minimize.style.paddingLeft = '15px';
+    minimize.style.paddingTop = '20px';
+    minimize.style.paddingLeft = '20px';
     minimize.innerText = '-';
     minimize.onclick = () => {
         bodyDiv.hidden = !bodyDiv.hidden;
@@ -136,11 +136,11 @@ details summary ~ * {
     bodyDiv.appendChild(body);
     GUI.appendChild(bodyDiv);
 
-    body.innerHTML = (`<span id="curPageEl">${getSite(true) ? `Current gamemode: ${getSite(true)}` : 'No game detected'}</span><br><span>(Press E to hide)</span><br>`);
+    body.innerHTML = (`<span id="curPageEl">${getSite(true) ? `Current gamemode: ${getSite(true)}` : 'No Game Found!'}</span><br><span>(Press E To Hide GUI)</span><br>`);
     body.style.display = 'block';
-    body.style.margin = '10px';
+    body.style.margin = '20px';
     //body.style.background = 'white';
-    body.style.minHeight = '70px';
+    body.style.minHeight = '65px';
 
     let activeCheats = document.createElement('span');
     body.appendChild(activeCheats);
@@ -150,8 +150,8 @@ details summary ~ * {
     let footer = document.createElement('div');
     bodyDiv.appendChild(footer);
     footer.style.fontSize = '0.9rem';
-    footer.style.paddingBottom = '5px';
-    footer.innerHTML = (`<span>UI By Gliz<br>Cheats by <a style="color: lightblue" href="https://twitter.com/glizuwu">Proxy0</a></span>`);
+    footer.style.paddingBottom = '20px';
+    footer.innerHTML = (`<span>UI By Gliz<br>Cheats by <a style="color: lightblue" href="https://www.youtube.com/?embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com&source_ve_path=MTc4MDUz">Proxy0</a></span>`);
 
     var getValues = () => new Promise((e, t) => {
         try {
@@ -194,7 +194,7 @@ details summary ~ * {
                             },
                             body: await encodeValues({
                                 name: x.name,
-                                addedTokens: 250,
+                                addedTokens: 500,
                                 addedXp: 300
                             }, e.secret)
                         });
