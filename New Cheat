@@ -80,7 +80,7 @@ details summary ~ * {
     let header = document.createElement('div');
     GUI.appendChild(header);
     header.style.width = '100%';
-    header.style.height = '30px';
+    header.style.height = '60px';
     header.style.paddingTop = '8px';
     header.style.fontSize = '2.3rem';
     header.style.textAlign = 'center'
